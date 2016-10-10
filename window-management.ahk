@@ -115,3 +115,7 @@ Exit:
     }
     ExitApp
 return
+
+; Close programs -- Win+Q === Alt+F4
+#q::Send !{F4}
+return
