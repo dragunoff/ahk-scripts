@@ -1,5 +1,5 @@
 ﻿;
-; Swap ALT and CTRL
+; Remap CapsLock to Backspace
 ; ===
 ;
 
@@ -8,10 +8,5 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; Swap Left ALT and CTRL
-LAlt::LCtrl 
-LCtrl::LAlt
-
-; Swap Right ALT and CTRL
-RAlt::RCtrl 
-RCtrl::RAlt
+; Remap CapsLock to Backspace
+CapsLock::Backspace
