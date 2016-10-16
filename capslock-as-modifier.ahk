@@ -17,12 +17,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;     Cursor keys                - J, K, L, I
 ;     Enter                      - Space
 ;     Home, PgDn, PgUp, End      - U, O, Y, H
-;     Insert, Backspace and Del  - B, N, M
-;     Escape                     - P
+;     Backspace and Del  - N, M
 ;
 ;     Undo, redo                 - , and .
-;  
-; To use capslock as you normally would, you can press WinKey + Capslock
 ;
 
 
@@ -88,13 +85,11 @@ Capslock & SC023 up::SendInput {Blind}{PgDn Up}
 
 
 ;
-; Capslock + bnm (insert, backspace, del)
+; Capslock + nm (backspace, del)
 ;
-; b = SC030
 ; n = SC031
 ; m = SC032
 ;
-Capslock & SC030::SendInput {Blind}{Insert Down}
 Capslock & SC031::SendInput {Blind}{BS Down}
 Capslock & SC032::SendInput {Blind}{Del Down}
 
@@ -118,31 +113,6 @@ Capslock & SC034 up::SendInput {Ctrl Up}{y Up}
 
 
 ;
-; Capslock + p (esc)
-;
-; p = SC019
-;
-Capslock & SC019::SendInput {Blind}{Esc Down}
-
-
-
-
-
-;
 ; Make Capslock+Space -> Enter
 ;
 Capslock & Space::SendInput {Enter Down}
-
-
-
-
-
-;
-; Make Win Key + Capslock work like Capslock
-;
-#Capslock::
-If GetKeyState("CapsLock", "T") = 1
-    SetCapsLockState, AlwaysOff
-Else 
-    SetCapsLockState, AlwaysOn
-Return
