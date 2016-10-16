@@ -3,6 +3,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+
+
+
+
 ;
 ; Transparent and/or Always On Top 
 ;
@@ -14,6 +18,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 winArr := Object()
 OnExit, Exit
+
+
+
+
 
 ;
 ; Win-LButton: make window always on top
@@ -38,6 +46,10 @@ else
 }
 return
 
+
+
+
+
 ;
 ; Win-wheelup: make window less transparent
 ;
@@ -56,6 +68,10 @@ if (%currentWindow% != 255)
 SplashImage,,w100 x0 y0 b fs12, % %currentWindow%
 SetTimer, TurnOffSI, 1000, On
 Return
+
+
+
+
 
 ;
 ; Win-wheelup: make window more transparent
@@ -77,6 +93,10 @@ SplashImage,, w100 x0 y0 b fs12, % %currentWindow%
 SetTimer, TurnOffSI, 1000, On
 Return
 
+
+
+
+
 ; 
 ; Win-RButton: make window clickthoughable
 ;
@@ -85,6 +105,10 @@ WinGet, currentWindow, ID, A
 addToWinArr(currentWindow)
 WinSet, ExStyle, +0x80020, ahk_id %currentWindow%
 return
+
+
+
+
 
 ;
 ; Win-MButton: make window under mouse unclickthroughable
@@ -116,6 +140,12 @@ Exit:
     ExitApp
 return
 
-; Close programs -- Win+Q === Alt+F4
-#q::Send !{F4}
+
+
+
+
+;
+; Close programs -- Ctrl+Q === Alt+F4
+;
+^q::Send !{F4}
 return
