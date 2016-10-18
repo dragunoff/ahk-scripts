@@ -17,7 +17,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;     Cursor keys                - J, K, L, I
 ;     Enter                      - Space
 ;     Home, PgDn, PgUp, End      - U, O, Y, H
-;     Backspace and Del  - N, M
+;     Backspace and Del          - N, M
+;     Escape                     - P
 ;
 ;     Undo, redo                 - , and .
 ;
@@ -92,6 +93,18 @@ Capslock & SC023 up::SendInput {Blind}{PgDn Up}
 ;
 Capslock & SC031::SendInput {Blind}{BS Down}
 Capslock & SC032::SendInput {Blind}{Del Down}
+
+
+
+
+
+;
+; Capslock + p (escape)
+;
+; p = SC019
+;
+Capslock & SC019::SendInput {Blind}{Esc Down}
+Capslock & SC019 up::SendInput {Blind}{Esc Up}
 
 
 
