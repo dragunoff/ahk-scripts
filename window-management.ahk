@@ -147,5 +147,5 @@ return
 ;
 ; Close programs -- Ctrl+Q === Alt+F4
 ;
-^q::Send !{F4}
+^SC010::Send !{F4}
 return
