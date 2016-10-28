@@ -139,13 +139,3 @@ Exit:
     }
     ExitApp
 return
-
-
-
-
-
-;
-; Close programs -- Ctrl+Q === Alt+F4
-;
-^SC010::Send !{F4}
-return
