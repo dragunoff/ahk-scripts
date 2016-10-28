@@ -18,7 +18,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;     Enter                      - Space
 ;     Home, PgDn, PgUp, End      - U, O, Y, H
 ;     Backspace and Del          - N, M
-;     Escape                     - P
+;     Escape                     - 8
 ;
 ;     Undo, redo                 - , and .
 ;
@@ -99,12 +99,12 @@ Capslock & SC032::SendInput {Blind}{Del Down}
 
 
 ;
-; Capslock + p (escape)
+; Capslock + 8 (escape)
 ;
-; p = SC019
+; 8 = SC009
 ;
-Capslock & SC019::SendInput {Blind}{Esc Down}
-Capslock & SC019 up::SendInput {Blind}{Esc Up}
+Capslock & SC009::SendInput {Blind}{Esc Down}
+Capslock & SC009 up::SendInput {Blind}{Esc Up}
 
 
 
@@ -126,6 +126,18 @@ Capslock & SC034 up::SendInput {Ctrl Up}{y Up}
 
 
 ;
-; Make Capslock+Space -> Enter
+; Make Capslock + Space -> Enter
 ;
 Capslock & Space::SendInput {Enter Down}
+
+
+
+
+
+;
+; Make Capslock + a -> LAlt
+;
+; a = SC01E
+;
+Capslock & SC01E::SendInput {LAlt Down}
+Capslock & SC01E up::SendInput {LAlt Up}
