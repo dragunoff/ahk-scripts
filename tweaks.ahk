@@ -12,3 +12,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SC010::Send !{F4}
 return
 
+;
+; Swap F1 and F12
+;
+F1::F12
+F12::F1
+
