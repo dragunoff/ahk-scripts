@@ -14,6 +14,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Map Win+Tab to Alt+Tab
 ;
 LWin & Tab:: AltTab
+RWin & Tab:: AltTab
 
 ;
 ; Map Alt+Tab to Win+Tab
