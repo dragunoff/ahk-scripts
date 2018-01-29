@@ -10,16 +10,16 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;
-; Open PHP by pressing Win+,
+; Open PHP by pressing Alt+,
 ;
-#,::
+!,::
 	Send, <?php{Space}
 	Return
 	
 ;
-; Close PHP by pressing Win+.
+; Close PHP by pressing Alt+.
 ;
-#.::
+!.::
 	Send, ?>
 	Return
 	
